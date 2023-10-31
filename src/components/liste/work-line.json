@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_liste_work_lines",
+  "info": {
+    "displayName": "workLine",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "work": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::work.work"
+    },
+    "quantity": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "default": 1
+    }
+  }
+}

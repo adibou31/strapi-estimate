@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estimatifs",
+  "info": {
+    "singularName": "estimatif",
+    "pluralName": "estimatifs",
+    "displayName": "Estimate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {}
+    },
+    "workLines": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {},
+      "component": "liste.work-line",
+      "required": true,
+      "min": 1
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "estimates"
+    }
+  }
+}
